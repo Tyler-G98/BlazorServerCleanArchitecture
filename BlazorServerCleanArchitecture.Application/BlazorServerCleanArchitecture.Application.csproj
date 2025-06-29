@@ -15,7 +15,10 @@
   <ItemGroup>
     <Folder Include="Common\" />
     <Folder Include="Extensions\" />
-    <Folder Include="Features\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlazorServerCleanArchitecture.Domain\BlazorServerCleanArchitecture.Domain.csproj" />
   </ItemGroup>
 
 </Project>

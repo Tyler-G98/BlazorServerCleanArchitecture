@@ -12,4 +12,13 @@
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlazorServerCleanArchitecture.Domain\BlazorServerCleanArchitecture.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
