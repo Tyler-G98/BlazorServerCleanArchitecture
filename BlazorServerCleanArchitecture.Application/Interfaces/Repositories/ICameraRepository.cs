@@ -1,5 +1,5 @@
 ﻿public interface ICameraRepository
 {
-    Task<List<Camera>> GetRobotByTypeAsync(string cameraType);
+    Task<List<Camera>> GetCameraByType(string cameraType);
 }
 
