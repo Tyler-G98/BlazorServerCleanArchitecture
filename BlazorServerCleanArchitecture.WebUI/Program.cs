@@ -1,4 +1,6 @@
 using BlazorServerCleanArchitecture.WebUI.Components;
+using BlazorServerCleanArchitecture.Application;
+using BlazorServerCleanArchitecture.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +17,9 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+builder.Services.AddApplicationLayer();
+builder.Services.AddPersistenceLayer(builder.Configuration);
 
 app.UseHttpsRedirection();
 

@@ -1,7 +1,48 @@
 ﻿@page "/cameras"
+@using BlazorServerCleanArchitecture.Application.Features.Cameras.Queries.GetAllCameras
 @using MediatR
 @inject IMediator Mediator
 
 <PageTitle>Cameras</PageTitle>
 
 <h1>Cameras</h1>
+
+@if(cameras == null)
+{
+	<p><em>Loading...</em></p>
+}
+else
+{
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Resolution</th>
+				<th>Type</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var camera in cameras)
+			{
+				<tr>
+					<td>@camera.Id</td>
+					<td>@camera.Name</td>
+					<td>@camera.Resolution</td>
+					<td>@camera.Type</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}
+
+
+
+
+@code {
+	private List<GetAllCamerasDto>? cameras;
+	protected override async Task OnInitializedAsync()
+	{
+		cameras = await Mediator.Send(new GetAllCamerasQuery());
+	}
+}

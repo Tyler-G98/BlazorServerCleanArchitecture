@@ -3,6 +3,8 @@ using AutoMapper.QueryableExtensions;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
+namespace BlazorServerCleanArchitecture.Application.Features.Cameras.Queries.GetAllCameras;
+
 public record GetAllCamerasQuery : IRequest<List<GetAllCamerasDto>>;
 
 

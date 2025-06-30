@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BlazorServerCleanArchitecture.Application\BlazorServerCleanArchitecture.Application.csproj" />
-    <ProjectReference Include="..\BlazorServerCleanArchitecture.Domain\BlazorServerCleanArchitecture.Domain.csproj" />
   </ItemGroup>
 
 </Project>
